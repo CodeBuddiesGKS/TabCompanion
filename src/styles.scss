@@ -12,7 +12,35 @@ a {
 }
 
 .font-secondary {
-    color: #32CD32
+    color: #32CD32;
+}
+
+.btn {
+  border-radius: 2px;
+  border-color: white;
+}
+
+.btn-primary {
+  background-color: #32CD32;
+}
+.btn-primary:hover {
+  background-color: #009A00;
+  border-color: white;
+}
+.btn-primary:focus {
+  background-color: #009A00;
+  border-color: white;
+}
+
+input.form-control {
+  background-color: black;
+  color: white;
+  margin: 5px 0;
+  padding: 0 10px;
+  font-size: 17px;
+  line-height: 20px;
+  height: 40px;
+  border-radius: 2px;
 }
 
 .inline-block {
