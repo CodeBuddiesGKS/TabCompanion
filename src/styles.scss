@@ -1,50 +1,82 @@
+// Brand colors
+$brand-blue: #0f2a48;
+$primary-grey: #27384c;
+$link-blue: #00aeff;
+$primary-green: #009A00;
+$brand-green: #32CD32;
+$error-background: #360e10;
+$error-shadow: #551e21;
+$error-outline: rgba(205, 6, 6, 0.6);
+$black-shadow: rgba(0, 0, 0, 0.75);
+$black-background: rgba(0, 0, 0, 0.5);
+$border-off-white: rgba(255, 255, 255, 0.3);
+$text-off-white: rgba(255, 255, 255, 0.7);
+$brand-white: #fff;
+
 // Font from Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html, body, p, td, th, textarea, div, input {
   font-family: "Roboto";
-  background-color: #0f2a48;
-  color: white;
+  font-size: 17px;
+  background-color: $brand-blue;
+  color: $text-off-white;
 }
 
 a {
-    color: rgb(0, 174, 255);
+  font-size: 15px;
+  color: $link-blue;
+  text-decoration: none;
+}
+a:hover {
+  font-size: 15px;
+  color: $brand-white;
+  text-decoration: none;
 }
 
 .font-secondary {
-    color: #32CD32;
+  color: $brand-green;
 }
 
 .btn {
+  font-size: 17px;
+  height: 40px;
   border-radius: 2px;
-  border-color: white;
+  color: $brand-white;
 }
 
 .btn-primary {
-  background-color: #32CD32;
+  background-color: $primary-green;
+  border-color: $brand-green;
 }
 .btn-primary:hover {
-  background-color: #009A00;
-  border-color: white;
+  background-color: $brand-green;
+  border-color: $brand-green;
 }
 .btn-primary:focus {
-  background-color: #009A00;
-  border-color: white;
+  background-color: $brand-green;
+  border-color: $brand-green;
 }
 
 input.form-control {
-  background-color: black;
-  color: white;
+  background-color: $black-background;
+  color: $text-off-white;
   margin: 5px 0;
   padding: 0 10px;
   font-size: 17px;
   line-height: 20px;
   height: 40px;
   border-radius: 2px;
+  border-color: $border-off-white;
 }
 
 .inline-block {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
+}
+
+.error {
+  background-color: $error-background;
+  box-shadow: 0 0 0 1px $error-shadow inset, 0 5px 10px $black-shadow;
 }
