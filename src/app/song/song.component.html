@@ -1,0 +1,8 @@
+<div [ngSwitch]="currentPage">
+    <div *ngSwitchCase="0">
+        <song-list (navigateTo)="navigateTo($event)"></song-list>
+    </div>
+    <div *ngSwitchCase="1">
+        <song-detail (navigateTo)="navigateTo($event)"></song-detail>
+    </div>
+</div>

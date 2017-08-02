@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <h1>
+    Verticle virtual list
+  </h1>
+
+  <div class="status">
+    Showing <span class="badge">{{indices?.start + 1}}</span> - <span class="badge">{{indices?.end}}</span> of <span class="badge">{{items?.length}}</span>
+    <span>({{scrollItems?.length}} nodes)</span>
+  </div>
+
+  <div class="list-wrapper">
+    <div class="list">
+      <div class="row">
+        <div class="col-xs-6">Artist</div>
+        <div class="col-xs-6">Title</div>
+      </div>
+      <virtual-scroll 
+        [items]="items" 
+        (change)="indices = $event" 
+        (update)="onUpdate($event)" 
+        style="height: 80vh; display: block">
+        <div *ngFor="let item of scrollItems; let i = index;">
+          <div class="row" [ngClass]="itemClass(i)">
+            <div class="col-xs-6">{{item?.name}}</div>
+            <div class="col-xs-6">{{item?.name}}</div>
+          </div>
+        </div>
+      </virtual-scroll>
+    </div>
+  </div>
+</div>

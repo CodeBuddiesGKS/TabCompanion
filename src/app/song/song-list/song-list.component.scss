@@ -1,0 +1,38 @@
+// Brand colors
+$brand-blue: #0f2a48;
+$primary-grey: #27384c;
+$link-blue: #00aeff;
+$primary-green: #009A00;
+$brand-green: #32CD32;
+$error-background: #360e10;
+$error-shadow: #551e21;
+$error-outline: rgba(205, 6, 6, 0.6);
+$black-shadow: rgba(0, 0, 0, 0.75);
+$black-background: rgba(0, 0, 0, 0.5);
+$border-off-white: rgba(255, 255, 255, 0.3);
+$text-off-white: rgba(255, 255, 255, 0.7);
+$brand-white: #fff;
+
+.list-wrapper {
+  min-width: 290px;
+  max-width: 600px;
+  margin: 0 auto 200px;
+  padding: 0 20px;
+}
+
+.list {
+  width: 100%;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.even-col {
+  background-color: $primary-grey;
+  color: $brand-green;
+}
+
+div.odd-col {
+  background-color: $brand-blue;
+  color: $brand-white;
+}

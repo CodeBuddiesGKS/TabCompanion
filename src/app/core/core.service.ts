@@ -1,8 +1,12 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
+import { User } from './models/user';
+
 @Injectable()
 export class CoreService {
     public loading: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+    public currentUser: User;
 
     constructor() {}
 

@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { SignInModule } from './sign-in/sign-in.module';
+import { SongModule } from './song/song.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { SignInModule } from './sign-in/sign-in.module';
     HttpModule,
     SharedModule,
     SignInModule,
+    SongModule
+,    
   ],
   providers: [],
   bootstrap: [AppComponent]
