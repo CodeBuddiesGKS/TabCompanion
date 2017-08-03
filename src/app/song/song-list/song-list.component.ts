@@ -45,4 +45,12 @@ export class SongListComponent implements OnInit {
             return {'odd-col': true}
         }
     }
+
+    linkClass(index: number) {
+        if (index % 2 == 0) {
+            return {'link-green': true};
+        } else {
+            return {'link-white': true}
+        }
+    }
 }

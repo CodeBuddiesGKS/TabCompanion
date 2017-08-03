@@ -27,11 +27,32 @@ a {
   font-size: 15px;
   color: $link-blue;
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover {
   font-size: 15px;
   color: $brand-white;
   text-decoration: none;
+}
+a.link-green {
+  font-size: 15px;
+  color: $brand-green;
+  text-decoration: underline;
+}
+a.link-green:hover {
+  font-size: 15px;
+  color: $primary-green;
+  text-decoration: underline;
+}
+a.link-white {
+  font-size: 15px;
+  color: $brand-white;
+  text-decoration: underline;
+}
+a.link-white:hover {
+  font-size: 15px;
+  color: $text-off-white;
+  text-decoration: underline;
 }
 
 .font-secondary {
@@ -56,6 +77,11 @@ a:hover {
 .btn-primary:focus {
   background-color: $brand-green;
   border-color: $brand-green;
+}
+
+.badge {
+  background-color: $primary-green;
+  color: $brand-white;
 }
 
 input.form-control {
