@@ -1,0 +1,43 @@
+[{
+  "index": 0,
+  "name": "A",
+  "fingerPositions": [ 0, 2, 2, 2, 0, 6 ],
+  "fingerLabels": [ "o", "3", "2", "1", "o", "x" ],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "B7",
+  "fingerPositions": [ 2, 0, 2, 1, 2, 6 ],
+  "fingerLabels": [ "4", "o", "3", "1", "2", "x" ],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "C",
+  "fingerPositions": [ 0, 1, 0, 2, 3, 6 ],
+  "fingerLabels": [ "o", "1", "o", "2", "3", "x" ],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "D",
+  "fingerPositions": [ 2, 3, 2, 0, 0, 6 ],
+  "fingerLabels": [ "2", "3", "1", "o", "o", "x" ],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "E",
+  "fingerPositions": [ 0, 0, 1, 2, 2, 0 ],
+  "fingerLabels": [ "o", "o", "1", "3", "2", "o" ],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "F",
+  "fingerPositions": [ 0, 1, 2, 3, 3, 0 ],
+  "fingerLabels": [ "o", "1", "2", "4", "3", "o" ],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "G",
+  "fingerPositions": [ 3, 3, 0, 0, 2, 3 ],
+  "fingerLabels": [ "4", "3", "o", "o", "1", "2" ],
+  "fretStart": 0
+}]

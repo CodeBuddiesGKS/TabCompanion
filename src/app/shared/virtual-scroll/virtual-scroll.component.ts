@@ -17,12 +17,12 @@ export abstract class ObjectList<T> {
     styleUrls: ['virtual-scroll.component.scss']
 })
 export class VirtualScrollComponent<T> implements OnInit, OnDestroy, OnChanges {
-
     @Input() items: ObjectList<T> = [];
     @Input() scrollbarWidth: number;
     @Input() scrollbarHeight: number;
     @Input() childWidth: number;
     @Input() childHeight: number;
+    @Input() forceRefresh: boolean;
 
     @Output() update: EventEmitter<ChangeEvent> = new EventEmitter<ChangeEvent>();
     @Output() change: EventEmitter<ChangeEvent> = new EventEmitter<ChangeEvent>();

@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 
 import { CurrentSongPage } from './shared/models/current-song-page';
 
+import { Song } from '../core/models/song';
+
 @Component({
     selector: 'song',
     templateUrl: './song.component.html',
@@ -10,6 +12,7 @@ import { CurrentSongPage } from './shared/models/current-song-page';
 export class SongComponent implements OnInit {
     private backButtonListener: any;
     private currentPage: CurrentSongPage;
+    private songSelected: Song;
 
     constructor() {}
     

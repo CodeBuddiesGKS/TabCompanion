@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
+import { ChordService } from './chord.service';
 import { CoreService } from './core.service';
 
 @NgModule({
@@ -11,6 +12,7 @@ export class CoreModule {
         return {
             ngModule: CoreModule,
             providers: [
+                ChordService,
                 CoreService
             ]
         }

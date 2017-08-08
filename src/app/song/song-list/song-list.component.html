@@ -1,18 +1,18 @@
 <div class="container-fluid">
-  <h1 class="text-center">
+  <h1 class="text-center" style="color: #32cd32">
     My Songs
   </h1>
 
   <div class="list-wrapper">
     <div class="list">
       <div class="form-group">
-        <input class="form-control" placeholder="Search...">
+        <input class="form-control" type="search" name="search" [(ngModel)]="searchValue" (keyup)="filter();" placeholder="Search...">
       </div>
       <div class="form-group">
         <button class="btn btn-primary btn-block">+ Add a song</button>
       </div>
 
-      <div class="status text-center">
+      <div class="status text-center" *ngIf="scrollItems?.length > 0">
         Showing <span class="badge">{{indices?.start + 1}}</span> - <span class="badge">{{indices?.end}}</span> of <span class="badge">{{items?.length}}</span>
         <span>({{scrollItems?.length}} nodes)</span>
       </div>
@@ -23,14 +23,15 @@
       </div>
 
       <virtual-scroll 
-        [items]="items" 
-        (change)="indices = $event" 
-        (update)="onUpdate($event)" 
+        [items]="items"
+        [forceRefresh]="forceRefresh"
+        (change)="indices = $event"
+        (update)="onUpdate($event)"
         style="height: 60vh; display: block">
-        <div *ngFor="let item of scrollItems; let i = index;">
+        <div *ngFor="let song of scrollItems; let i = index;">
           <div class="row" [ngClass]="itemClass(i)" style="margin-left: 0; margin-right: 0;">
-            <div class="col-xs-6"><a [ngClass]="linkClass(i)">{{item?.name}}</a></div>
-            <div class="col-xs-6"><a [ngClass]="linkClass(i)">{{item?.name}}</a></div>
+            <div class="col-xs-6"><a [ngClass]="linkClass(i)" (click)="searchValue = song?.artist; filter();">{{song?.artist}}</a></div>
+            <div class="col-xs-6"><a [ngClass]="linkClass(i)" (click)="openSongDetail(song);">{{song?.title}}</a></div>
           </div>
         </div>
       </virtual-scroll>

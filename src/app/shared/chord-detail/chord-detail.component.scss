@@ -1,0 +1,64 @@
+.string-label-box {
+  width: 8px;
+  height: 130px;
+  margin-top: 20px;
+}
+
+.string-label {
+  font-size: 10px;
+  color: black;
+  height: 20px;
+}
+
+.fret-start {
+  width: 25px;
+  height: 12px;
+  margin-top: 5px;
+  font-size: 10px;
+  color: black;
+  float: left;
+}
+
+.neck {
+  width: 127px;
+  height: 100px;
+  margin-top: 27px;
+  border-left: 2px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+.string-row {
+
+}
+
+.fret-cell {
+  position: relative;
+  width: 25px;
+  height: 20px;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  float: left;
+}
+
+.bottom-fret-cell {
+  position: relative;
+  width: 25px;
+  height: 1px;
+  float: left;
+}
+
+.finger {
+  position: absolute;
+  top: -8px;
+  left: 4.5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 8px;
+  font-size: 10px;
+  background-color: #009A00;
+  color: #fff;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 15px;
+}

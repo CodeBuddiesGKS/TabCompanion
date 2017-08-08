@@ -1,0 +1,77 @@
+<div class="panel panel-default inline-block" style="margin-right: 20px;" *ngIf="!open" (click)="open = !open">
+  <div class="panel-heading text-center" style="width: 100px; height: 100px;">
+    <div style="margin: auto; position: relative; top: 50%; transform: translateY(-50%)">{{chord.name}}</div>
+  </div>
+</div>
+
+<div class="panel panel-default inline-block" style="margin-right: 20px;" *ngIf="open" (click)="open = !open">
+  <div class="panel-heading text-center">{{chord.name}}</div>
+  <div class="panel-body">
+    <div style="width: 154px; height: 150px;">
+      <div class="string-label-box inline-block">
+        <div class="string-label">e</div>
+        <div class="string-label">B</div>
+        <div class="string-label">G</div>
+        <div class="string-label">D</div>
+        <div class="string-label">A</div>
+        <div class="string-label">E</div>
+      </div>
+
+      <div class="neck inline-block">
+        <div class="string-row">
+            <div class="fret-cell"><div class="finger" *ngIf="eStringPosition==1">{{eStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="eStringPosition==2">{{eStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="eStringPosition==3">{{eStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="eStringPosition==4">{{eStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="eStringPosition==5">{{eStringLabel}}</div></div>
+        </div>
+        <div class="string-row">
+            <div class="fret-cell"><div class="finger" *ngIf="BStringPosition==1">{{BStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="BStringPosition==2">{{BStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="BStringPosition==3">{{BStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="BStringPosition==4">{{BStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="BStringPosition==5">{{BStringLabel}}</div></div>
+        </div>
+        <div class="string-row">
+            <div class="fret-cell"><div class="finger" *ngIf="GStringPosition==1">{{GStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="GStringPosition==2">{{GStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="GStringPosition==3">{{GStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="GStringPosition==4">{{GStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="GStringPosition==5">{{GStringLabel}}</div></div>
+        </div>
+        <div class="string-row">
+            <div class="fret-cell"><div class="finger" *ngIf="DStringPosition==1">{{DStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="DStringPosition==2">{{DStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="DStringPosition==3">{{DStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="DStringPosition==4">{{DStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="DStringPosition==5">{{DStringLabel}}</div></div>
+        </div>
+        <div class="string-row">
+            <div class="fret-cell"><div class="finger" *ngIf="AStringPosition==1">{{AStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="AStringPosition==2">{{AStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="AStringPosition==3">{{AStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="AStringPosition==4">{{AStringLabel}}</div></div>
+            <div class="fret-cell"><div class="finger" *ngIf="AStringPosition==5">{{AStringLabel}}</div></div>
+        </div>
+        <div class="string-row">
+            <div class="bottom-fret-cell"><div class="finger" *ngIf="EStringPosition==1">{{EStringLabel}}</div></div>
+            <div class="bottom-fret-cell"><div class="finger" *ngIf="EStringPosition==2">{{EStringLabel}}</div></div>
+            <div class="bottom-fret-cell"><div class="finger" *ngIf="EStringPosition==3">{{EStringLabel}}</div></div>
+            <div class="bottom-fret-cell"><div class="finger" *ngIf="EStringPosition==4">{{EStringLabel}}</div></div>
+            <div class="bottom-fret-cell"><div class="finger" *ngIf="EStringPosition==5">{{EStringLabel}}</div></div>
+        </div>
+
+        <div class="fret-start inline-block" *ngIf="fretStart > 0">{{fretStart}} fr</div>
+      </div>
+
+      <div class="string-label-box inline-block">
+        <div class="string-label"><div *ngIf="eStringPosition==0">o</div><div *ngIf="eStringPosition==6">x</div></div>
+        <div class="string-label"><div *ngIf="BStringPosition==0">o</div><div *ngIf="BStringPosition==6">x</div></div>
+        <div class="string-label"><div *ngIf="GStringPosition==0">o</div><div *ngIf="GStringPosition==6">x</div></div>
+        <div class="string-label"><div *ngIf="DStringPosition==0">o</div><div *ngIf="DStringPosition==6">x</div></div>
+        <div class="string-label"><div *ngIf="AStringPosition==0">o</div><div *ngIf="AStringPosition==6">x</div></div>
+        <div class="string-label"><div *ngIf="EStringPosition==0">o</div><div *ngIf="EStringPosition==6">x</div></div>
+      </div>
+    </div>
+  </div>
+</div>

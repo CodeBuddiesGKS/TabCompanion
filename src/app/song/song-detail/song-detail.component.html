@@ -1,1 +1,28 @@
-Song-detail
+<div class="container-fluid">
+  <header>
+    <h1 class="text-center" style="color: #32cd32">
+      {{songSelected?.title}}
+    </h1>
+    <h4 class="text-center" style="color: #fff">
+      by {{songSelected?.artist}}
+    </h4>
+  </header>
+
+  <div class="row" style="margin-bottom: 20px;">
+    <div class="col-xs-12">Chords:</div>
+
+    <div class="col-xs-12">
+      <span *ngFor="let chord of chords">
+        <chord-detail [chord]="chord" *ngIf="chord"></chord-detail>
+      </span>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom: 20px;">
+    <div class="col-xs-12">Sections</div>
+  </div>
+
+  <div class="row" style="margin-bottom: 60px;">
+    <div class="col-xs-12">Dynamic Staff</div>
+  </div>
+</div>
