@@ -9,6 +9,10 @@
   </header>
 
   <div class="row" style="margin-bottom: 20px;">
+    <div class="col-xs-12">Capo: 6th fret</div>
+  </div>
+
+  <div class="row" style="margin-bottom: 20px;">
     <div class="col-xs-12">Chords:</div>
 
     <div class="col-xs-12">
@@ -19,10 +23,37 @@
   </div>
 
   <div class="row" style="margin-bottom: 20px;">
-    <div class="col-xs-12">Sections</div>
+    <div class="col-xs-12">Sections:</div>
+    
+    <div class="col-xs-12 panel-group section-accordian" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-primary" *ngFor="let section of sections; let i = index;">
+        <div class="panel-heading collapsed" 
+            (click)="section.open = !section.open;"
+            role="tab"
+            id="heading{{i}}"
+            data-toggle="collapse"
+            data-parent="#accordion"
+            attr.data-target="#collapse{{i}}"
+            aria-expanded="false"
+            attr.aria-controls="collapse{{i}}">
+          <h4 class="panel-title">
+            {{section.title}}
+            <i class="glyphicon pull-right"
+                [ngClass]="{'glyphicon-chevron-up': section.open, 'glyphicon-chevron-down': !section.open}"
+                aria-hidden="true"></i>
+          </h4>
+        </div>
+        <div id="collapse{{i}}"
+              class="panel-collapse collapse"
+              role="tabpanel"
+              attr.aria-labelledby="heading{{i}}">
+          <div class="panel-body" style="font-family: 'Roboto Mono'" [innerHTML]="section.content"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="row" style="margin-bottom: 60px;">
-    <div class="col-xs-12">Dynamic Staff</div>
+    <div class="col-xs-12">Dynamic Staff:</div>
   </div>
 </div>

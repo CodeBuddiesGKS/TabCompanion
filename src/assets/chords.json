@@ -1,43 +1,85 @@
 [{
   "index": 0,
   "name": "A",
-  "fingerPositions": [ 0, 2, 2, 2, 0, 6 ],
-  "fingerLabels": [ "o", "3", "2", "1", "o", "x" ],
+  "fingerPositions": [0, 2, 2, 2, 0, 6],
+  "fingerLabels": ["o", "3", "2", "1", "o", "x"],
   "fretStart": 0
 },{
   "index": 0,
+  "name": "Am",
+  "fingerPositions": [0, 1, 2, 2, 0, 6],
+  "fingerLabels": ["o", "1", "3", "2", "o", "x"],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "B",
+  "fingerPositions": [1, 3, 3, 3, 1, 6],
+  "fingerLabels": ["1", "4", "3", "2", "1", "x"],
+  "fretStart": 2
+},{
+  "index": 0,
   "name": "B7",
-  "fingerPositions": [ 2, 0, 2, 1, 2, 6 ],
-  "fingerLabels": [ "4", "o", "3", "1", "2", "x" ],
+  "fingerPositions": [2, 0, 2, 1, 2, 6],
+  "fingerLabels": ["4", "o", "3", "1", "2", "x"],
   "fretStart": 0
 },{
   "index": 0,
   "name": "C",
-  "fingerPositions": [ 0, 1, 0, 2, 3, 6 ],
-  "fingerLabels": [ "o", "1", "o", "2", "3", "x" ],
+  "fingerPositions": [0, 1, 0, 2, 3, 6],
+  "fingerLabels": ["o", "1", "o", "2", "3", "x"],
   "fretStart": 0
 },{
   "index": 0,
   "name": "D",
-  "fingerPositions": [ 2, 3, 2, 0, 0, 6 ],
-  "fingerLabels": [ "2", "3", "1", "o", "o", "x" ],
+  "fingerPositions": [2, 3, 2, 0, 0, 6],
+  "fingerLabels": ["2", "3", "1", "o", "o", "x"],
   "fretStart": 0
 },{
   "index": 0,
+  "name": "Dm",
+  "fingerPositions": [1, 3, 2, 0, 6, 6],
+  "fingerLabels": ["1", "3", "2", "o", "x", "x"],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "D#m",
+  "fingerPositions": [1, 2, 3, 3, 1, 6],
+  "fingerLabels": ["1", "2", "4", "3", "1", "x"],
+  "fretStart": 6
+},{
+  "index": 0,
   "name": "E",
-  "fingerPositions": [ 0, 0, 1, 2, 2, 0 ],
-  "fingerLabels": [ "o", "o", "1", "3", "2", "o" ],
+  "fingerPositions": [0, 0, 1, 2, 2, 0],
+  "fingerLabels": ["o", "o", "1", "3", "2", "o"],
+  "fretStart": 0
+},{
+  "index": 0,
+  "name": "Em",
+  "fingerPositions": [0, 0, 0, 2, 2, 0],
+  "fingerLabels": ["o", "o", "o", "2", "1", "o"],
   "fretStart": 0
 },{
   "index": 0,
   "name": "F",
-  "fingerPositions": [ 0, 1, 2, 3, 3, 0 ],
-  "fingerLabels": [ "o", "1", "2", "4", "3", "o" ],
+  "fingerPositions": [1, 1, 2, 3, 3, 1],
+  "fingerLabels": ["1", "1", "2", "4", "3", "1"],
   "fretStart": 0
 },{
   "index": 0,
+  "name": "F#",
+  "fingerPositions": [1, 1, 2, 3, 3, 1],
+  "fingerLabels": ["1", "1", "2", "4", "3", "1"],
+  "fretStart": 2
+},{
+  "index": 0,
   "name": "G",
-  "fingerPositions": [ 3, 3, 0, 0, 2, 3 ],
-  "fingerLabels": [ "4", "3", "o", "o", "1", "2" ],
+  "fingerPositions": [3, 3, 0, 0, 2, 3],
+  "fingerLabels": ["4", "3", "o", "o", "1", "2"],
   "fretStart": 0
+},{
+  "index": 0,
+  "name": "G#m",
+  "fingerPositions": [1, 1, 1, 3, 3, 1],
+  "fingerLabels": ["1", "1", "1", "4", "3", "1"],
+  "fretStart": 4
 }]

@@ -6,7 +6,7 @@
 
 .string-label {
   font-size: 10px;
-  color: black;
+  color: #000;
   height: 20px;
 }
 
@@ -15,7 +15,7 @@
   height: 12px;
   margin-top: 5px;
   font-size: 10px;
-  color: black;
+  color: #000;
   float: left;
 }
 
@@ -23,8 +23,8 @@
   width: 127px;
   height: 100px;
   margin-top: 27px;
-  border-left: 2px solid #000000;
-  border-top: 1px solid #000000;
+  border-left: 2px solid #000;
+  border-top: 1px solid #000;
 }
 
 .string-row {
@@ -35,8 +35,8 @@
   position: relative;
   width: 25px;
   height: 20px;
-  border-right: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
   float: left;
 }
 
@@ -55,10 +55,7 @@
   height: 15px;
   border-radius: 8px;
   font-size: 10px;
+  border: 1px solid #32CD32;
   background-color: #009A00;
   color: #fff;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-align: center;
-  line-height: 15px;
 }

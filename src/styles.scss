@@ -15,6 +15,7 @@ $brand-white: #fff;
 
 // Font from Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 html, body, p, td, th, textarea, input {
   font-family: "Roboto";
@@ -79,6 +80,19 @@ a.link-white:hover {
   border-color: $brand-green;
 }
 
+.panel.panel-primary {
+  border-color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.panel-primary>.panel-heading {
+  color: #fff;
+  background-color: #27384c;
+  border-color: #000;
+}
+.panel-primary>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #000;
+}
+
 .badge {
   background-color: $primary-green;
   color: $brand-white;
@@ -94,6 +108,13 @@ input.form-control {
   height: 40px;
   border-radius: 2px;
   border-color: $border-off-white;
+}
+
+.text-center-vert {
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 .inline-block {
