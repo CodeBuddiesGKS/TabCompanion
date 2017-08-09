@@ -28,6 +28,10 @@ export class ChordDetailComponent implements OnInit {
 
     private fretStart: number;
 
+    private barFirstIndex: number;
+    private barLastIndex: number;
+    private barPosition: number;
+
     constructor() { }
 
     ngOnInit() {
@@ -46,5 +50,15 @@ export class ChordDetailComponent implements OnInit {
         this.EStringLabel = this.chord.fingerLabels[5];
 
         this.fretStart = this.chord.fretStart;
+
+        this.findBarChord();
+    }
+
+    findBarChord() {
+        this.barFirstIndex = this.chord.fingerLabels.indexOf("|");
+        this.barLastIndex = this.chord.fingerLabels.lastIndexOf("|");
+        if (this.barFirstIndex != -1) {
+            this.barPosition = this.chord.fingerPositions[this.barFirstIndex];
+        }
     }
 }

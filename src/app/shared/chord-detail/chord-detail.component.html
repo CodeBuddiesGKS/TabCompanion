@@ -19,46 +19,136 @@
 
       <div class="neck inline-block">
         <div class="string-row">
-            <div class="fret-cell"><div class="finger text-center" *ngIf="eStringPosition==1"><div class="text-center-vert">{{eStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="eStringPosition==2"><div class="text-center-vert">{{eStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="eStringPosition==3"><div class="text-center-vert">{{eStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="eStringPosition==4"><div class="text-center-vert">{{eStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="eStringPosition==5"><div class="text-center-vert">{{eStringLabel}}</div></div></div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="eStringPosition==1 && barPosition!=1"><div class="text-center-vert">{{eStringLabel}}</div></div>
+              <div class="bar bar-top" *ngIf="barPosition==1 && barFirstIndex<=0 && barLastIndex>=0"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="eStringPosition==2 && barPosition!=2"><div class="text-center-vert">{{eStringLabel}}</div></div>
+              <div class="bar bar-top" *ngIf="barPosition==2 && barFirstIndex<=0 && barLastIndex>=0"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="eStringPosition==3 && barPosition!=3"><div class="text-center-vert">{{eStringLabel}}</div></div>
+              <div class="bar bar-top" *ngIf="barPosition==3 && barFirstIndex<=0 && barLastIndex>=0"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="eStringPosition==4 && barPosition!=4"><div class="text-center-vert">{{eStringLabel}}</div></div>
+              <div class="bar bar-top" *ngIf="barPosition==4 && barFirstIndex<=0 && barLastIndex>=0"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="eStringPosition==5 && barPosition!=5"><div class="text-center-vert">{{eStringLabel}}</div></div>
+              <div class="bar bar-top" *ngIf="barPosition==5 && barFirstIndex<=0 && barLastIndex>=0"></div>
+            </div>
         </div>
         <div class="string-row">
-            <div class="fret-cell"><div class="finger text-center" *ngIf="BStringPosition==1"><div class="text-center-vert">{{BStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="BStringPosition==2"><div class="text-center-vert">{{BStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="BStringPosition==3"><div class="text-center-vert">{{BStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="BStringPosition==4"><div class="text-center-vert">{{BStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="BStringPosition==5"><div class="text-center-vert">{{BStringLabel}}</div></div></div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="BStringPosition==1 && barPosition!=1"><div class="text-center-vert">{{BStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==1 && barFirstIndex<=1 && barLastIndex>=1"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="BStringPosition==2 && barPosition!=2"><div class="text-center-vert">{{BStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==2 && barFirstIndex<=1 && barLastIndex>=1"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="BStringPosition==3 && barPosition!=3"><div class="text-center-vert">{{BStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==3 && barFirstIndex<=1 && barLastIndex>=1"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="BStringPosition==4 && barPosition!=4"><div class="text-center-vert">{{BStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==4 && barFirstIndex<=1 && barLastIndex>=1"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="BStringPosition==5 && barPosition!=5"><div class="text-center-vert">{{BStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==5 && barFirstIndex<=1 && barLastIndex>=1"></div>
+            </div>
         </div>
         <div class="string-row">
-            <div class="fret-cell"><div class="finger text-center" *ngIf="GStringPosition==1"><div class="text-center-vert">{{GStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="GStringPosition==2"><div class="text-center-vert">{{GStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="GStringPosition==3"><div class="text-center-vert">{{GStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="GStringPosition==4"><div class="text-center-vert">{{GStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="GStringPosition==5"><div class="text-center-vert">{{GStringLabel}}</div></div></div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="GStringPosition==1 && barPosition!=1"><div class="text-center-vert">{{GStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==1 && barFirstIndex<=2 && barLastIndex>=2"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="GStringPosition==2 && barPosition!=2"><div class="text-center-vert">{{GStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==2 && barFirstIndex<=2 && barLastIndex>=2"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="GStringPosition==3 && barPosition!=3"><div class="text-center-vert">{{GStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==3 && barFirstIndex<=2 && barLastIndex>=2"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="GStringPosition==4 && barPosition!=4"><div class="text-center-vert">{{GStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==4 && barFirstIndex<=2 && barLastIndex>=2"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="GStringPosition==5 && barPosition!=5"><div class="text-center-vert">{{GStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==5 && barFirstIndex<=2 && barLastIndex>=2"></div>
+            </div>
         </div>
         <div class="string-row">
-            <div class="fret-cell"><div class="finger text-center" *ngIf="DStringPosition==1"><div class="text-center-vert">{{DStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="DStringPosition==2"><div class="text-center-vert">{{DStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="DStringPosition==3"><div class="text-center-vert">{{DStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="DStringPosition==4"><div class="text-center-vert">{{DStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="DStringPosition==5"><div class="text-center-vert">{{DStringLabel}}</div></div></div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="DStringPosition==1 && barPosition!=1"><div class="text-center-vert">{{DStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==1 && barFirstIndex<=3 && barLastIndex>=3"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="DStringPosition==2 && barPosition!=2"><div class="text-center-vert">{{DStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==2 && barFirstIndex<=3 && barLastIndex>=3"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="DStringPosition==3 && barPosition!=3"><div class="text-center-vert">{{DStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==3 && barFirstIndex<=3 && barLastIndex>=3"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="DStringPosition==4 && barPosition!=4"><div class="text-center-vert">{{DStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==4 && barFirstIndex<=3 && barLastIndex>=3"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="DStringPosition==5 && barPosition!=5"><div class="text-center-vert">{{DStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==5 && barFirstIndex<=3 && barLastIndex>=3"></div>
+            </div>
         </div>
         <div class="string-row">
-            <div class="fret-cell"><div class="finger text-center" *ngIf="AStringPosition==1"><div class="text-center-vert">{{AStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="AStringPosition==2"><div class="text-center-vert">{{AStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="AStringPosition==3"><div class="text-center-vert">{{AStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="AStringPosition==4"><div class="text-center-vert">{{AStringLabel}}</div></div></div>
-            <div class="fret-cell"><div class="finger text-center" *ngIf="AStringPosition==5"><div class="text-center-vert">{{AStringLabel}}</div></div></div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="AStringPosition==1 && barPosition!=1"><div class="text-center-vert">{{AStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==1 && barFirstIndex<=4 && barLastIndex>=4"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="AStringPosition==2 && barPosition!=2"><div class="text-center-vert">{{AStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==2 && barFirstIndex<=4 && barLastIndex>=4"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="AStringPosition==3 && barPosition!=3"><div class="text-center-vert">{{AStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==3 && barFirstIndex<=4 && barLastIndex>=4"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="AStringPosition==4 && barPosition!=4"><div class="text-center-vert">{{AStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==4 && barFirstIndex<=4 && barLastIndex>=4"></div>
+            </div>
+            <div class="fret-cell">
+              <div class="finger text-center" *ngIf="AStringPosition==5 && barPosition!=5"><div class="text-center-vert">{{AStringLabel}}</div></div>
+              <div class="bar" *ngIf="barPosition==5 && barFirstIndex<=4 && barLastIndex>=4"></div>
+            </div>
         </div>
         <div class="string-row">
-            <div class="bottom-fret-cell"><div class="finger text-center" *ngIf="EStringPosition==1"><div class="text-center-vert">{{EStringLabel}}</div></div></div>
-            <div class="bottom-fret-cell"><div class="finger text-center" *ngIf="EStringPosition==2"><div class="text-center-vert">{{EStringLabel}}</div></div></div>
-            <div class="bottom-fret-cell"><div class="finger text-center" *ngIf="EStringPosition==3"><div class="text-center-vert">{{EStringLabel}}</div></div></div>
-            <div class="bottom-fret-cell"><div class="finger text-center" *ngIf="EStringPosition==4"><div class="text-center-vert">{{EStringLabel}}</div></div></div>
-            <div class="bottom-fret-cell"><div class="finger text-center" *ngIf="EStringPosition==5"><div class="text-center-vert">{{EStringLabel}}</div></div></div>
+            <div class="bottom-fret-cell">
+              <div class="finger text-center" *ngIf="EStringPosition==1 && barPosition!=1"><div class="text-center-vert">{{EStringLabel}}</div></div>
+              <div class="bar bar-bottom" *ngIf="barPosition==1 && barFirstIndex<=5 && barLastIndex>=5"></div>
+            </div>
+            <div class="bottom-fret-cell">
+              <div class="finger text-center" *ngIf="EStringPosition==2 && barPosition!=2"><div class="text-center-vert">{{EStringLabel}}</div></div>
+              <div class="bar bar-bottom" *ngIf="barPosition==2 && barFirstIndex<=5 && barLastIndex>=5"></div>
+            </div>
+            <div class="bottom-fret-cell">
+              <div class="finger text-center" *ngIf="EStringPosition==3 && barPosition!=3"><div class="text-center-vert">{{EStringLabel}}</div></div>
+              <div class="bar bar-bottom" *ngIf="barPosition==3 && barFirstIndex<=5 && barLastIndex>=5"></div>
+            </div>
+            <div class="bottom-fret-cell">
+              <div class="finger text-center" *ngIf="EStringPosition==4 && barPosition!=4"><div class="text-center-vert">{{EStringLabel}}</div></div>
+              <div class="bar bar-bottom" *ngIf="barPosition==4 && barFirstIndex<=5 && barLastIndex>=5"></div>
+            </div>
+            <div class="bottom-fret-cell">
+              <div class="finger text-center" *ngIf="EStringPosition==5 && barPosition!=5"><div class="text-center-vert">{{EStringLabel}}</div></div>
+              <div class="bar bar-bottom" *ngIf="barPosition==5 && barFirstIndex<=5 && barLastIndex>=5"></div>
+            </div>
         </div>
 
         <div class="fret-start inline-block" *ngIf="fretStart > 0">{{fretStart}} fr</div>
