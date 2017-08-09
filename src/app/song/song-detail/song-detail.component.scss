@@ -2,41 +2,102 @@
   color: #000;
 }
 
-.finger {
-  top: -8px;
-  left: 4.5px;
-  width: 15px;
-  height: 15px;
+.string-label-box {
+  width: 8px;
+  height: 230px;
+  margin-top: 48px;
+}
+
+.string-label {
+  font-size: 10px;
+  color: #000;
+  height: 40px;
+}
+
+.neck {
+  width: 254px;
+  height: 200px;
+  margin-top: 54px;
+  border-left: 2px solid #000;
+  border-top: 1px solid #000;
+}
+
+.fret-start {
+  width: 25px;
+  height: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 10px;
+  color: #000;
+  float: left;
+}
+
+.fret-cell {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  float: left;
+}
+
+.bottom-fret-cell {
+  position: relative;
+  width: 50px;
+  height: 1px;
+  float: left;
+}
+
+.none {
+  position: absolute;
+  top: -5px;
+  left: 19px;
+  width: 10px;
+  height: 10px;
   border-radius: 8px;
   font-size: 10px;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.finger {
+  position: absolute;
+  top: -15px;
+  left: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 14px;
   border: 1px solid #32CD32;
   background-color: #009A00;
   color: #fff;
+  cursor: pointer;
 }
 
 .bar {
-  top: -8px;
-  left: 9px;
-  width: 6px;
-  height: 20px;
+  position: absolute;
+  top: -18px;
+  left: 18px;
+  width: 12px;
+  height: 40px;
   font-size: 10px;
   border-left: 1px solid #32CD32;
   border-right: 1px solid #32CD32;
   background-color: #009A00;
-}
-.bar.bar-top {
-  border-top: 1px solid #32CD32;
-}
-.bar.bar-bottom {
-  height: 15px;
-  border-bottom: 1px solid #32CD32;
+  cursor: pointer;
 }
 
-.string-label-right {
-  width: 15px;
-  height: 15px;
-  font-size: 10px;
+.side-box-container {
+  height: 230px;
+  margin-top: 40px;
+}
+
+.side-box {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
   border: 1px solid #000;
   background-color: #fff;
   color: #000;
+  cursor: pointer;
 }

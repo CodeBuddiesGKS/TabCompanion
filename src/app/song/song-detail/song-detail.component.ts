@@ -16,6 +16,9 @@ export class SongDetailComponent implements OnInit {
     private chords: Chord[];
     private sections: string[];
 
+    private fretSelection: number[] = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
+    private sideSelection: number[] = [ 0, 0, 0, 0, 0, 0 ];
+
     constructor(private chordService: ChordService) { }
 
     ngOnInit() {
@@ -29,5 +32,13 @@ export class SongDetailComponent implements OnInit {
         });
 
         this.sections = this.songSelected.sections;
+    }
+
+    incrementFretSelection(fret) {
+        this.fretSelection[fret] == 5 ? this.fretSelection[fret] = 0 : this.fretSelection[fret]++;
+    }
+
+    incrementSideSelection(string) {
+        this.sideSelection[string] == 2 ? this.sideSelection[string] = 0 : this.sideSelection[string]++;
     }
 }
