@@ -22,62 +22,7 @@
     </div>
 
     <div class="col-xs-12">
-      <div class="text-center">
-        <div class="inline-block" style="width: 500px; height: 500px; padding: 15px; background-color: rgba(255,255,255,0.5)">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="form-group">
-                <label>Chord Name<input class="form-control" type="text"></label>
-                <label>Starting Fret<input class="form-control" type="number" value="1" min="1"></label>
-
-                <div style="height: 280px;">
-                  <div class="string-label-box inline-block">
-                    <div class="string-label">e</div>
-                    <div class="string-label">B</div>
-                    <div class="string-label">G</div>
-                    <div class="string-label">D</div>
-                    <div class="string-label">A</div>
-                    <div class="string-label">E</div>
-                  </div>
-
-                  <div class="neck inline-block">
-                    <div *ngFor="let fs of fretSelection; let i=index;">
-                      <div [ngSwitch]="fs" [ngClass]="{'fret-cell': i <= 24, 'bottom-fret-cell': i > 24 }">
-                        <div (click)="incrementFretSelection(i)">
-                          <div *ngSwitchCase="0" class="none"></div>
-                          <div *ngSwitchCase="1" class="finger text-center"><div class="text-center-vert">1</div></div>
-                          <div *ngSwitchCase="2" class="finger text-center"><div class="text-center-vert">2</div></div>
-                          <div *ngSwitchCase="3" class="finger text-center"><div class="text-center-vert">3</div></div>
-                          <div *ngSwitchCase="4" class="finger text-center"><div class="text-center-vert">4</div></div>
-                          <div *ngSwitchCase="5" class="bar"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="fret-start inline-block" *ngIf="fretStart > 0">{{fretStart}} fr</div>
-                  </div>
-
-                  <div class="side-box-container inline-block">
-                    <div *ngFor="let ss of sideSelection; let i=index;">
-                      <div [ngSwitch]="ss" class="string-label">
-                        <div (click)="incrementSideSelection(i)">
-                          <div *ngSwitchCase="0" class="side-box"></div>
-                          <div *ngSwitchCase="1" class="side-box text-center"><div class="text-center-vert">o</div></div>
-                          <div *ngSwitchCase="2" class="side-box text-center"><div class="text-center-vert">x</div></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="text-center">
-                  <div class="btn btn-primary">Save</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <chord-generator></chord-generator>
     </div>
 
     <div class="col-xs-12">
