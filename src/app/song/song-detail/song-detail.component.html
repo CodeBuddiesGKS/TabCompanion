@@ -20,6 +20,42 @@
         <chord-detail [chord]="chord" *ngIf="chord"></chord-detail>
       </span>
     </div>
+
+    <div class="col-xs-12">
+      <div class="text-center">
+        <div class="inline-block" style="width: 500px; height: 500px; padding: 15px; background-color: rgba(255,255,255,0.5)">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <input class="form-control" placeholder="Name">
+
+                <div class="well well-lg">
+                  <div class="finger text-center inline-block"><div class="text-center-vert">1</div></div>
+                  <div class="finger text-center inline-block"><div class="text-center-vert">2</div></div>
+                  <div class="finger text-center inline-block"><div class="text-center-vert">3</div></div>
+                  <div class="finger text-center inline-block"><div class="text-center-vert">4</div></div>
+                  <div class="bar text-center inline-block"><div class="text-center-vert"></div></div>
+                  <div class="string-label-right text-center inline-block"><div class="text-center-vert">x</div></div>
+                  <div class="string-label-right text-center inline-block"><div class="text-center-vert">o</div></div>
+                </div>
+
+                <div style="height: 280px;">
+                  
+                </div>
+
+                <div class="text-center">
+                  <div class="btn btn-primary">Save</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12">
+      <div class="btn btn-primary" (click)="doNothing()">+ Add a chord</div>
+    </div>
   </div>
 
   <div class="row" style="margin-bottom: 20px;">
@@ -50,6 +86,10 @@
           <div class="panel-body" style="font-family: 'Roboto Mono'" [innerHTML]="section.content"></div>
         </div>
       </div>
+    </div>
+
+    <div class="col-xs-12">
+      <div class="btn btn-primary" (click)="doNothing()">+ Add a section</div>
     </div>
   </div>
 
